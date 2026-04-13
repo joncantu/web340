@@ -51,3 +51,15 @@
 
       at log (src/distance-calculator.js:55:11)
 
+PASS test/distance-calculator.spec.js
+  ✓ Bad Planet Name 1 Test (30 ms)
+  ✓ Bad Planet Name 2 Test (3 ms)
+  ✓ Earth to Mars Test (1 ms)
+  ✓ Mars to Earth Test (1 ms)
+  ✓ Venus to Jupiter Mixed Case Test (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.339 s, estimated 1 s
+Ran all test suites.
