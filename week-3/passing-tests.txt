@@ -1,0 +1,53 @@
+
+> distance-calculator@1.0.0 test
+> jest
+
+  console.error
+    Error: Planet 'Bloomy' not found.
+
+      38 |   // Check if both planets exist in the Map and throw specific errors.
+      39 |   if (!planetMap.has(p1)) {
+    > 40 |     console.error(`Error: Planet '${p1}' not found.`);
+         |             ^
+      41 |     throw new Error("Invalid planet name for planet 1.");
+      42 |   }
+      43 |   if (!planetMap.has(p2)) {
+
+      at error (src/distance-calculator.js:40:13)
+      at calculateDistance (test/distance-calculator.spec.js:15:16)
+      at Object.<anonymous> (node_modules/expect/build/index.js:1824:9)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:2235:93)
+      at Object.toThrow (test/distance-calculator.spec.js:15:53)
+
+  console.error
+    Error: Planet 'Moon' not found.
+
+      42 |   }
+      43 |   if (!planetMap.has(p2)) {
+    > 44 |     console.error(`Error: Planet '${p2}' not found.`);
+         |             ^
+      45 |     throw new Error("Invalid planet name for planet 2.");
+      46 |   }
+      47 |
+
+      at error (src/distance-calculator.js:44:13)
+      at calculateDistance (test/distance-calculator.spec.js:19:16)
+      at Object.<anonymous> (node_modules/expect/build/index.js:1824:9)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:2235:93)
+      at Object.toThrow (test/distance-calculator.spec.js:19:52)
+
+  console.log
+    The average distance between Earth and Mars is 0.52 AU.
+
+      at log (src/distance-calculator.js:55:11)
+
+  console.log
+    The average distance between Mars and Earth is 0.52 AU.
+
+      at log (src/distance-calculator.js:55:11)
+
+  console.log
+    The average distance between Venus and Jupiter is 4.48 AU.
+
+      at log (src/distance-calculator.js:55:11)
+
