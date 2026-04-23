@@ -1,0 +1,6 @@
+// jsonconfig.json
+{
+  "compilerOptions": {
+    "types": ["jest"]
+  }
+}
