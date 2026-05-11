@@ -1,0 +1,38 @@
+Jonathans-MacBook-Pro-2:fantasy-character-creation-stream jonathan$ npm install
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 267 packages, and audited 268 packages in 6s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+2 vulnerabilities (1 moderate, 1 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+Jonathans-MacBook-Pro-2:fantasy-character-creation-stream jonathan$ npm audit fix
+
+changed 2 packages, and audited 268 packages in 5s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+Jonathans-MacBook-Pro-2:fantasy-character-creation-stream jonathan$ npm test
+
+> fantasy-character-creation-stream@1.0.0 test
+> jest --runInBand
+
+ PASS  test/character-creator.spec.js
+  CharacterCreator
+    ✓ processes data correctly (4 ms)
+    ✓ emits error on empty input (7 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.506 s
+Ran all test suites.
