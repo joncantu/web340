@@ -1,0 +1,98 @@
+Jonathans-MacBook-Pro-2:fantasy-character-creation jonathan$ npm test
+
+> fantasy-character-creation@1.0.0 test
+> jest --runInBand
+
+ FAIL  test/character-creation.spec.js
+  ● File System Character Creation › Writes character data to a stable path
+
+    expect(received).resolves.toBeUndefined()
+
+    Received promise rejected instead of resolved
+    Rejected to value: [Error: ENOENT: no such file or directory, access '/Users/jonathan/Projects/Bellevue/WEB340/web340/week-8/starter/fantasy-character-creation/test/test-data/character.json']
+
+      37 |
+      38 |     // Verify the file exists where we expect it to.
+    > 39 |     await expect(fs.access(TEST_FILE_PATH)).resolves.toBeUndefined();
+         |           ^
+      40 |
+      41 |     // Verify the data was stored as a valid JSON string (not double-stringified).
+      42 |     const rawData = await fs.readFile(TEST_FILE_PATH, "utf8");
+
+      at expect (node_modules/expect/build/index.js:113:15)
+      at Object.expect (test/character-creation.spec.js:39:11)
+
+  ● File System Character Creation › Reads character data and returns a reliable OBJECT
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "object"
+    Received: "string"
+
+      52 |     const resultData = await readCharacter();
+      53 |
+    > 54 |     expect(typeof resultData).toBe("object");
+         |                               ^
+      55 |     expect(resultData).not.toBeNull();
+      56 |     expect(resultData).toEqual(inputCharacter);
+      57 |     expect(resultData.spell).toBe("Fireball"); // Spot check a property.
+
+      at Object.toBe (test/character-creation.spec.js:54:31)
+
+  ● File System Character Creation › Handles missing-file scenarios in a controlled way
+
+    expect(received).toBeNull()
+
+    Received: "{\"class\":\"Warrior\",\"level\":5}"
+
+      62 |     // rather than throwing a raw ENOENT system error that crashes the process.
+      63 |     const result = await readCharacter();
+    > 64 |     expect(result).toBeNull();
+         |                    ^
+      65 |   });
+      66 | });
+      67 |
+
+      at Object.toBeNull (test/character-creation.spec.js:64:20)
+
+ FAIL  test/character-creation-old.spec.js
+  ● File System Character Creation › reads character data and returns an object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "object"
+    Received: "string"
+
+      27 |     const data = await readCharacter();
+      28 |
+    > 29 |     expect(typeof data).toBe("object");
+         |                         ^
+      30 |     expect(data.class).toBe("Mage");
+      31 |   });
+      32 |
+
+      at Object.toBe (test/character-creation-old.spec.js:29:25)
+
+  ● File System Character Creation › throws an error when file does not exist
+
+    expect(received).rejects.toBeInstanceOf()
+
+    Received promise resolved instead of rejected
+    Resolved to value: "{\"class\":\"Mage\",\"gender\":\"Other\",\"funFact\":\"Collects rare books.\"}"
+
+      32 |
+      33 |   test("throws an error when file does not exist", async () => {
+    > 34 |     await expect(readCharacter("missing.json"))
+         |           ^
+      35 |       .rejects
+      36 |       .toBeInstanceOf(Error);
+      37 |   });
+
+      at expect (node_modules/expect/build/index.js:113:15)
+      at Object.expect (test/character-creation-old.spec.js:34:11)
+
+Test Suites: 2 failed, 2 total
+Tests:       5 failed, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.596 s, estimated 1 s
+Ran all test suites.

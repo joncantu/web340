@@ -1,0 +1,16 @@
+Jonathans-MacBook-Pro-2:fantasy-character-creation jonathan$ npm test
+
+> fantasy-character-creation@1.0.0 test
+> jest --runInBand
+
+ PASS  test/character-creation.spec.js
+  File System Character Creation
+    ✓ writes character data to a stable path (6 ms)
+    ✓ reads character data and returns a reliable OBJECT (2 ms)
+    ✓ handles missing-file scenarios in a controlled way
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.317 s, estimated 1 s
+Ran all test suites.
