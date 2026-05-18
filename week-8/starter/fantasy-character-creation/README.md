@@ -63,9 +63,10 @@ Try using atomic controlled changes. The "Red-Green-Refactor" cycle discourages 
 
 
 ### REFERENCES:
-```Richard Krasso, Weekly Instructor Readings, Week 8
-Richard Krasso, 'Pragmatic Node.js', (2026), "Chapter 8. File System"
-YouTube, Sabeel Khan, "Node.js File System Crash Course | Beginner Friendly", November 2025, https://www.youtube.com/watch?v=mSl5j4JwV7g&t=688s```
+ - Richard Krasso, Weekly Instructor Readings, Week 8
+ - Richard Krasso, 'Pragmatic Node.js', (2026), "Chapter 8. File System"
+ - YouTube, Sabeel Khan, "Node.js File System Crash Course | Beginner Friendly", November 2025, https://www.youtube.com/watch?v=mSl5j4JwV7g&t=688s
+
 
 # Assignment 8.2 - Forensic Reconstruction with the File System Module
 
