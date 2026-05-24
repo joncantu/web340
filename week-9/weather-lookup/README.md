@@ -1,4 +1,4 @@
-# Weather Lookup App 🌦️
+# Weather Lookup App
 
 A small modular Node.js command-line application that looks up weather data using the Open-Meteo geocoding and forecast APIs.
 
@@ -20,7 +20,7 @@ OpenAI GPT-5.4
   - Jest tests
   - modular design
 
-## Requirements 🛠️
+## Requirements
 
 - Node.js 18 or later
 - npm
@@ -32,19 +32,20 @@ Node 18+ is required because this project uses the built-in `fetch()` API.
 
 ```bash
 npm install
-
+```
 
 ## Running
 
 EXAMPLES:
-```
+```bash
 node app.js "New York_NY_US"
 node app.js "Cantu_Como_IT"
 node app.js "Tokyo_Tokyo_JP"
-
+```
 
 ## Testing
 
 ```bash
 npm test
+```
 
