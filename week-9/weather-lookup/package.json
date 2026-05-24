@@ -1,0 +1,17 @@
+{
+  "name": "weather-lookup",
+  "version": "1.0.0",
+  "description": "Small modular Node.js weather lookup app using Open-Meteo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js Boston_MA_US",
+    "test": "jest --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+
